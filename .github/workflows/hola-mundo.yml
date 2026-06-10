@@ -1,17 +1,15 @@
 
 name: Mi Primer Workflow
-# 1. ¿Cuándo se ejecuta? Al hacer push a la rama 'main'
+
 on:
- push:
- branches: [ main ]
-# 2. ¿Qué va a hacer?
+  push:
+    branches: [ main ]
+
 jobs:
- saludo:
- # Tipo de máquina virtual que usaremos
- runs-on: ubuntu-latest
- # Pasos secuenciales
- steps:
- - name: Imprimir saludo en consola
- run: echo "¡Hola Mundo! Tu GitHub Action funciona perfectamente."
- - name: Mostrar la fecha actual
- run: date
+  saludo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Imprimir saludo en consola
+        run: echo "¡Hola Mundo! Tu GitHub Action funciona perfectamente."
+      - name: Mostrar la fecha actual
+        run: date
